@@ -10,7 +10,9 @@ class Gallery extends Component {
     return (
       <div>
         {this.props.state.flows[0] ? 
-          <p>{this.props.state.flows[0].name}</p>
+          <ul>{this.props.state.flows.map((item)=> {
+             return <li>{item.name}</li>
+          })}</ul>
           :
           <p></p>
         }

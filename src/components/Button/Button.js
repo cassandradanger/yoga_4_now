@@ -6,7 +6,7 @@ class Button extends Component {
   
   render() {
     return (
-      <button onClick={(event) => this.props.chooseFlow(event, this.props.name)} className="mainBtn">{this.props.name}</button>
+      <button onClick={(event) => this.props.chooseFlow(event, this.props.id)} className="mainBtn">{this.props.name}</button>
     );
   }
 }

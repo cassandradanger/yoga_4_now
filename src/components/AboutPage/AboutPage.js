@@ -8,9 +8,9 @@ class AboutPage extends Component {
     this.props.dispatch({type: 'FETCH_FLOWS'});
   }
 
-  chooseFlow = (event, flowName) => {
-    console.log(flowName);
-    this.props.dispatch({type: 'FETCH_CHOSEN_FLOW', payload: flowName});
+  chooseFlow = (event, flowId) => {
+    console.log(flowId);
+    this.props.dispatch({type: 'FETCH_CHOSEN_FLOW', payload: flowId});
     this.props.history.push('/gallery')
 
   }
@@ -23,7 +23,7 @@ class AboutPage extends Component {
           </p>
           <div className="buttonWrapper">
             {this.props.state.flows.map((flow) => {
-              return <Button chooseFlow={this.chooseFlow} key={flow.id} name={flow.name}></Button>
+              return <Button chooseFlow={this.chooseFlow} key={flow.id} id={flow.id} name={flow.name}></Button>
             })}
           </div>
         </div>
