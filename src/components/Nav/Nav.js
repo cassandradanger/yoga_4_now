@@ -16,13 +16,13 @@ const Nav = (props) => (
       <Link className="nav-link" to="/flows">
         Flows
       </Link>
+      {props.user.id && props.user.admin && (
+        <Link className="nav-link" to="/addPose">
+          Add Pose
+        </Link>
+      )}
       {props.user.id && (
-        <>
-          <Link className="nav-link" to="/addPose">
-            Add Pose
-          </Link>
-          <LogOutButton className="nav-link"/>
-        </>
+        <LogOutButton className="nav-link"/>
       )}
     </div>
   </div>
