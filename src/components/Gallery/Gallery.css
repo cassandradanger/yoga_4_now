@@ -7,3 +7,7 @@ p {
     flex-direction: column;
     padding: 0 20px 20px;
 }
+
+.image{
+    width: 200px;
+}

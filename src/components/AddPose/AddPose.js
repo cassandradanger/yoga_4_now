@@ -13,6 +13,10 @@ class AddPose extends Component {
     pose: ''
   }
 
+  componentDidMount () {
+    this.props.dispatch({type: 'FETCH_FLOWS'});
+  }
+
   chooseFlow = (e) =>{
     console.log("KJHJDH", e.target.value);
     let flowId = this.props.state.flows.filter(item => item.name === e.target.value );

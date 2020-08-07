@@ -13,6 +13,9 @@ const Nav = (props) => (
       <Link className="nav-link" to="/home">
         {props.user.id ? 'Home' : 'Login / Register'}
       </Link>
+      <Link className="nav-link" to="/flows">
+        Flows
+      </Link>
       {props.user.id && (
         <>
           <Link className="nav-link" to="/addPose">
@@ -21,9 +24,6 @@ const Nav = (props) => (
           <LogOutButton className="nav-link"/>
         </>
       )}
-      <Link className="nav-link" to="/about">
-        About
-      </Link>
     </div>
   </div>
 );

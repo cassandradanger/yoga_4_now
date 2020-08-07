@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Button from '../Button/Button';
 
-class AboutPage extends Component {
+class FlowsPage extends Component {
 
   componentDidMount () {
     this.props.dispatch({type: 'FETCH_FLOWS'});
@@ -11,8 +11,10 @@ class AboutPage extends Component {
   chooseFlow = (event, flowId) => {
     console.log(flowId);
     this.props.dispatch({type: 'FETCH_CHOSEN_FLOW', payload: flowId});
-    this.props.history.push('/gallery')
-
+    this.props.history.push({
+      pathname: `/gallery`,
+      search: `${flowId}`
+    })
   }
   render() {
     return (
@@ -37,4 +39,4 @@ const mapStateToProps = state => ({
   state
 });
 
-export default connect(mapStateToProps)(AboutPage);
+export default connect(mapStateToProps)(FlowsPage);

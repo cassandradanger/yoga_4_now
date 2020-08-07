@@ -13,7 +13,7 @@ import Footer from '../Footer/Footer';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 
-import AboutPage from '../AboutPage/AboutPage';
+import FlowsPage from '../FlowsPage/FlowsPage';
 import UserPage from '../UserPage/UserPage';
 import AddPose from '../AddPose/AddPose';
 import Gallery from '../Gallery/Gallery';
@@ -35,8 +35,8 @@ class App extends Component {
             <Redirect exact from="/" to="/home" />
             <Route
               exact
-              path="/about"
-              component={AboutPage}
+              path="/flows"
+              component={FlowsPage}
             />
 
             <ProtectedRoute
