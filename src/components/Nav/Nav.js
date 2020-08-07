@@ -15,8 +15,8 @@ const Nav = (props) => (
       </Link>
       {props.user.id && (
         <>
-          <Link className="nav-link" to="/info">
-            Info Page
+          <Link className="nav-link" to="/addPose">
+            Add Pose
           </Link>
           <LogOutButton className="nav-link"/>
         </>

@@ -15,7 +15,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
-import InfoPage from '../InfoPage/InfoPage';
+import AddPose from '../AddPose/AddPose';
 import Gallery from '../Gallery/Gallery';
 
 import './App.css';
@@ -47,8 +47,8 @@ class App extends Component {
             
             <ProtectedRoute
               exact
-              path="/info"
-              component={InfoPage}
+              path="/addPose"
+              component={AddPose}
             />
             
             <Route path="/gallery" component={Gallery} />

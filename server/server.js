@@ -10,6 +10,7 @@ const passport = require('./strategies/user.strategy');
 
 const userRouter = require('./routes/user.router');
 const flowsRouter = require('./routes/flows.router');
+const poseRouter = require('./routes/pose.router');
 
 const UploaderS3Router = require('react-dropzone-s3-uploader/s3router');
 
@@ -31,6 +32,7 @@ app.use('/s3', UploaderS3Router({
 
 app.use('/api/user', userRouter);
 app.use('/api/flows', flowsRouter);
+app.use('/api/pose', poseRouter);
 
 
 app.use(express.static('build'));
