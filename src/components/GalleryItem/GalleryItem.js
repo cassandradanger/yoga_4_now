@@ -11,7 +11,7 @@ class GalleryItem extends Component {
 
   render() {
     return (
-      <div>
+      <div className="galleryItem">
         <img className="image" src={this.props.item.imageUrl}/>
         <p>{this.props.item.name}</p>
       </div>

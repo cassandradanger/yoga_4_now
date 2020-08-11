@@ -1,4 +1,11 @@
 .galleryWrapper{
     display: flex;
     justify-content: space-evenly;
+    height: 650px;
+}
+
+.directionButton{
+    height: 40px;
+    width: 40px;
+    align-self: center;
 }
