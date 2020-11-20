@@ -13,7 +13,7 @@ class GalleryItem extends Component {
     return (
       <div className="galleryItem">
         <img className="image" src={this.props.item.imageUrl}/>
-        <p>{this.props.item.name}</p>
+        <p>{this.props.item.pose_name}</p>
       </div>
     )
   }

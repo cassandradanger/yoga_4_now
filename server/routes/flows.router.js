@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
 
 router.get('/:flow', (req, res) => {
     console.log('req.boyd', req.params);
-    let sqlQuery = `SELECT * from "pose" WHERE "flow_id" = '${req.params.flow}'; `;
+    let sqlQuery = `SELECT * from "pose" JOIN "flows" ON "flows"."id" = ${req.params.flow} WHERE "pose"."flow_id" = ${req.params.flow};`
     pool.query(sqlQuery)
     .then((result) => {
         console.log("HAHAHAHHAHAHAHHHHAA", result.rows);

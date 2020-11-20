@@ -44,11 +44,14 @@ class Gallery extends Component {
     return (
       <div>
         {this.props.state.chosenFlow[0] ? 
-          <div className="galleryWrapper">
-            <button className="directionButton" onClick={(e) => {this.onClick(e, 'back')}}> - </button>
-            <GalleryItem item={this.props.state.chosenFlow[this.state.index]}></GalleryItem>
-            <button className="directionButton" onClick={(e) => {this.onClick(e, 'forward')}}> + </button>
-          </div>
+          <>
+            <h1>{this.props.state.chosenFlow[0].name}</h1>
+            <div className="galleryWrapper">
+              <button className="directionButton" onClick={(e) => {this.onClick(e, 'back')}}> - </button>
+              <GalleryItem item={this.props.state.chosenFlow[this.state.index]}></GalleryItem>
+              <button className="directionButton" onClick={(e) => {this.onClick(e, 'forward')}}> + </button>
+            </div>
+          </>
           :
           <p></p>
         }
