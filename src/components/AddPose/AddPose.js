@@ -36,7 +36,7 @@ class AddPose extends Component {
 
   submitChange = () => {
     console.log("YO", this.state);
-    this.props.dispatch({type: 'ADD_POSE', payload: this.state});
+    this.props.dispatch({type: 'ADD_POSE', payload: this.state, history: this.props.history, id: this.state.flowId});
   }
 
   addNewImage = (imageURL) => {
